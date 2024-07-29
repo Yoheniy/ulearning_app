@@ -10,6 +10,10 @@ class AppBlocs extends Bloc<AppEvents,AppStates>{
       emit(AppStates(counter: state.counter+1));
     });
 
+    on<Decrement>((event,emit){
+      emit(AppStates(counter: state.counter-1));
+    });
+
 
 
   }
